@@ -43,7 +43,13 @@ begin
     wait for 1 ns;
     assert(q_out='1') report "Fail 1/X" severity error;
 
-    -- Tes case 4: 1 OR 1 
+    -- Test case 4:  unknown(x) OR 1
+    a_in <= 'X';
+    b_in <= '1';
+    wait for 1 ns;
+    asser(q_out='1') report "Fail X/1" severity error;
+
+    -- Test case 5: 1 OR 1 
     a_in <= '1';
     b_in <= '1';
     wait for 1 ns;
