@@ -8,7 +8,7 @@ end testbench;
 
 architecture tb of testbench is
 
--- DUT component
+-- DUT component declaration
 component or_gate is
 port(
   a: in std_logic;
